@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Rental Platform{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4 mb-4">Welcome to Rental Platform</h1>
+        <p class="lead">A platform for long-term apartment rentals</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">API Documentation</h5>
+                <p class="card-text">Access our API endpoints and documentation.</p>
+                <a href="/api/" class="btn btn-primary">View API</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Admin Panel</h5>
+                <p class="card-text">Manage the platform through the admin interface.</p>
+                <a href="/admin/" class="btn btn-secondary">Go to Admin</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h2>Available Endpoints</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Authentication:</strong>
+                <ul>
+                    <li>POST /api/token/ - Obtain JWT token</li>
+                    <li>POST /api/token/refresh/ - Refresh JWT token</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <strong>Users:</strong>
+                <ul>
+                    <li>GET /api/users/ - List users</li>
+                    <li>GET /api/users/me/ - Current user details</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <strong>Apartments:</strong>
+                <ul>
+                    <li>GET /api/apartments/ - List apartments</li>
+                    <li>POST /api/apartments/ - Create apartment</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <strong>Bookings:</strong>
+                <ul>
+                    <li>GET /api/bookings/ - List bookings</li>
+                    <li>POST /api/bookings/ - Create booking</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
