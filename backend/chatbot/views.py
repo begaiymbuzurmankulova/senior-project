@@ -1,3 +1,5 @@
+print("IMPORTING chatbot.views.py")
+
 import os
 import re
 from openai import OpenAI
