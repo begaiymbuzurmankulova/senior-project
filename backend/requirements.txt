@@ -13,4 +13,5 @@ sqlparse==0.5.2
 gunicorn
 drf_yasg==1.21.7
 setuptools
+openai==1.13.3
 
