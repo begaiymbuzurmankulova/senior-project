@@ -48,6 +48,7 @@ class ApartmentAdmin(admin.ModelAdmin):
         'price_per_month', 
         'bedrooms', 
         'is_available',
+        'property_type',
         'average_rating',
         'booking_count'
     )
@@ -63,7 +64,7 @@ class ApartmentAdmin(admin.ModelAdmin):
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'owner', 'description')
+            'fields': ('title', 'owner', 'property_type', 'description')  # <-- added here
         }),
         ('Location', {
             'fields': ('address', 'city', 'country')
@@ -75,6 +76,7 @@ class ApartmentAdmin(admin.ModelAdmin):
             'fields': ('is_available',)
         }),
     )
+
 
     def average_rating(self, obj):
         avg = obj.reviews.aggregate(Avg('rating'))['rating__avg']

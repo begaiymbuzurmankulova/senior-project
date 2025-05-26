@@ -12,6 +12,7 @@ class CustomUser(AbstractUser):
     profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
     bio = models.TextField(blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
+    is_verified = models.BooleanField(default=False)
     
     def __str__(self):
         return self.email
