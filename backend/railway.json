@@ -1,0 +1,7 @@
+{
+    "build": [
+      "pip install -r backend/requirements.txt"
+    ],
+    "start": "gunicorn backend.config.wsgi"
+  }
+  
